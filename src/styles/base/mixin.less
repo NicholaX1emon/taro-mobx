@@ -1,0 +1,28 @@
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// Text overflow for multiple lines
+// --------------------------------------------------
+
+.mul-text-truncate(@lines: 2) {
+  display:-webkit-box;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-line-clamp: @lines;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+.clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}

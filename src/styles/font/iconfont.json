@@ -1,0 +1,23 @@
+{
+  "id": "1741072",
+  "name": "taro-mobx",
+  "font_family": "mobx",
+  "css_prefix_text": "mobx",
+  "description": "font-class in taro-mobx",
+  "glyphs": [
+    {
+      "icon_id": "129311",
+      "name": "star",
+      "font_class": "star",
+      "unicode": "e8e9",
+      "unicode_decimal": 59625
+    },
+    {
+      "icon_id": "10506938",
+      "name": "star",
+      "font_class": "star1",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    }
+  ]
+}
