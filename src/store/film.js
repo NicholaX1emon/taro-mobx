@@ -1,20 +1,20 @@
-import Taro from '@tarojs/taro'
 import { observable } from 'mobx'
+
+import { request } from '../services/http'
 
 const filmStore = observable({
   films: [],
-  getAsyncFilms() {
-    let context = this
-    Taro.request({
-      url: 'https://ghibliapi.herokuapp.com/films',
-      success(res) {
-        const { data } = res
-        context.films = data
-      },
-      fail(res) {
-        console.log('res fail ---', res)
-      }
-    })
+  async getAsyncFilms() {
+    try {
+      const res = await request({
+        url: 'https://ghibliapi.herokuapp.com/films',
+      })
+      const { data } = res
+      this.films = data
+      // this.films.push(...data)
+    } catch(e) {
+      console.log(e)
+    }
   }
 })
 
